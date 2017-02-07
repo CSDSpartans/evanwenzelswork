@@ -25,10 +25,10 @@ import time
 
 #the width of the display
 #(the windows console is 79 characters wide).
-WIDTH = 79
+WIDTH = 25
 
 #the message we wish to print
-message = "hello!".upper()
+message = "jello!".upper()
 
 #the printed banner version of the message
 #this is a 7-line display, stored as 7 strings
@@ -77,7 +77,15 @@ characters = { " " : [ " ",
                        "*    ",
                        "*    ",
                        "*****" ],
-
+                       
+               "J" : [ "  ****",
+                       "    * ",
+                       "    * ",
+                       "    * ",
+                       "    * ",
+                       "*   * ",
+                       " ***  " ],
+                       
                "!" : [ "  *  ",
                        "  *  ",
                        "  *  ",
