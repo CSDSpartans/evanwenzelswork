@@ -28,7 +28,7 @@ import time
 WIDTH = 60
 
 #the message we wish to print
-message = "jello!".upper()
+message = "yellow!".upper()
 
 #the printed banner version of the message
 #this is a 7-line display, stored as 7 strings
@@ -93,7 +93,22 @@ characters = { " " : [ " ",
                        "  *  ",
                        "     ",
                        "  *  " ]
-               
+                       
+               "Y" : [ "*   *",
+                       "*   *",
+                       "*   *",
+                       " * * ",
+                       "  *  ",
+                       "  *  ",
+                       "  *  " ]
+                       
+               "W" : [ "*     *",
+                       "*     *",
+                       "*     *",
+                       "*  *  *",
+                       "*  *  *",
+                       "*  *  *",
+                       "*******" ]  
                }
 
 #build up the printed banner. to do this, the 1st row of the
