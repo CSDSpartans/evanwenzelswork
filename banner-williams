@@ -24,8 +24,8 @@ import os
 import time
 
 #the width of the display
-#(the windows console is 79 characters wide).
-WIDTH = 25
+#(the windows console is 60 characters wide)
+WIDTH = 60
 
 #the message we wish to print
 message = "jello!".upper()
