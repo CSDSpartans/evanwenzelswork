@@ -1,0 +1,22 @@
+import random
+answers = ["Yes", "No", "Maybe","Ask your mother.", "I'd rather not say", "Ofcourse!", "Probably", "I highly doubt it"]
+from termcolor import colored
+
+
+#MAGIC 8 BALL
+
+def game():
+    print(colored("Welcome to the Magic 8 Ball!", 'yellow', 'on_magenta', attrs=['bold']))
+    input(colored("What is your question? >>>", 'yellow', 'on_magenta', attrs=['bold']))
+    answer=random.choice(answers)
+    print(colored(answer, 'yellow', 'on_magenta', attrs=['bold']))
+    #print(answers[7])
+
+try:
+    while True:
+        game()
+    
+except(KeyboardInterrupt):
+    print(colored("Thanks for playing!", 'yellow', 'on_magenta', attrs=['bold']))
+    exit
+
