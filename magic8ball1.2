@@ -6,10 +6,10 @@ from termcolor import colored
 #MAGIC 8 BALL
 
 def game():
-    print(colored("Welcome to the Magic 8 Ball!", 'yellow',))
-    input(colored("What is your question? >>>", 'yellow',))
+    print(colored("Welcome to the Magic 8 Ball!", 'yellow', attrs=['bold']))
+    input(colored("What is your question? >>>", 'yellow', attrs=['bold']))
     answer=random.choice(answers)
-    print(colored(answer, 'yellow',))
+    print(colored(answer, 'yellow', attrs=['bold']))
     #print(answers[7])
 
 try:
@@ -17,5 +17,5 @@ try:
         game()
     
 except(KeyboardInterrupt):
-    print(colored("Thanks for playing!", 'yellow',))
+    print(colored("Thanks for playing!", 'yellow', attrs=['bold']))
     exit
