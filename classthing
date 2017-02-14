@@ -1,0 +1,21 @@
+import classes as cl
+import time as t
+class Goons():
+    att = 10 #Attack
+    mp = None #Magic Points
+    agi = -4
+    hp = 100
+class Logan(Goons):
+    deff = 25
+    att = 15
+class Sern(Logan):
+    hair = "Rad"
+while True:
+    print(cl.Goons.hp)
+    t.sleep(1)
+    cl.Goons.hp -= cl.Logan.att
+    print('"Yaaaah"')
+    if cl.Goons.hp <=0:
+        print("Logan has slayed the Goons")
+        t.sleep(3)
+        exit()
