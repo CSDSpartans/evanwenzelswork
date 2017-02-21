@@ -3,17 +3,17 @@
 from datetime import datetime
 from datetime import timedelta
 daysfrom = input('How many days from a date would you like?' )
-print(daysfrom +' days from today is:')
-print(datetime.now() + timedelta(days=1337))
+print(str(daysfrom) +' days from today is:')
+print(datetime.now() + timedelta(days=int(daysfrom)))
 
 date = input("What is the date you would like to use? YYYY/MM/DD \n").replace("/","")
 
 #print (daysfrom +' days from'+ date +':')
-#print (bdate + timedelta(days=1337))
+#print (bdate + daysfrom)
 year=int(date[0:4])
 month=int(date[4:6])
 day=int(date[6:8])
 print("The date you would like is "+str(month)+"/"+str(day)+"/"+str(year)+"?")
 #Maybe use an until loop here
 if input("(Y/n)") in ("Y","y","",None):
-    print(datetime(year,month,day)+timedelta(days=1337))
+    print(datetime(year,month,day) + timedelta(days=int(daysfrom)))
