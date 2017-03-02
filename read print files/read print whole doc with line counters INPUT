@@ -1,5 +1,5 @@
-#Make 4 documents with the poem starting on line 8, name them 1, 2, 3, and 4.
-
+# Make 4 documents with the poem starting on line 8, name them 1, 2, 3, and 4.
+# First 7 lines aren't printed.
 name_of_mydocument = input("What do you want to read? Type 1, 2, 3, or 4:")
 file_input = open(name_of_mydocument, 'r')     #open file for reading
 line_counter = 0
