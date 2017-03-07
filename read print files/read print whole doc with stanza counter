@@ -1,0 +1,27 @@
+name_of_mydocument = 'mydocument.txt'
+file_input = open(name_of_mydocument, 'r')     #open file for reading
+line_counter = 0
+stanza_counter = 1
+
+
+line = file_input.readline()
+line = file_input.readline()
+line = file_input.readline()
+
+
+
+
+while line != '': # while not end of file
+    line = file_input.readline()
+    if line == '\n':
+      stanza_counter += 1
+      print(line, end = '')
+    elif line != '\n':
+      line_counter += 1
+      print(line_counter, line, end = '')
+    
+    
+print()
+print("The number of stanzas in this poem are: ", stanza_counter) 
+
+file_input.close()
