@@ -34,8 +34,8 @@ while line != '':
 
 print ()
 print ()
-print ("The total number of stanzas in this poem are: ",  stanza_counter)
-print ("The total number of lines in this file are: ", total_lines_in_file)
+print ("The total number of stanzas in this poem are: ",  stanza_counter, '.')
+print ("The total number of lines in this file are: ", total_lines_in_file, '.')
 print("The song \"Tuesday Afternoon\" first appeared on the album \033[3mDays of Future Passed\033[0m in 1967.")
 print ('''The members of The Moody Blues are Justin Hayward, John Lodge, Mike Pinder, Ray Thomas, and Graeme Edge.''')
 
