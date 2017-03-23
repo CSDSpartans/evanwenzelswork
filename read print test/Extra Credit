@@ -1,13 +1,13 @@
 name_of_mydocument = 'tuesdayafternoon.txt'
-file_input = open(name_of_mydocument, 'r')  
+file_input = open(name_of_mydocument, 'r') #Opens file to be read  
 
 name_of_outputdocument = 'myoutputdocument.txt'
-file_output = open(name_of_outputdocument, 'w')
+file_output = open(name_of_outputdocument, 'w') #Opens file to write in
 
 
 
 
-line = file_input.readline()
+line = file_input.readline() 
 print("      ", line, end = '')
 file_output.write("      ")
 file_output.write(line)
@@ -16,33 +16,34 @@ print("      ", line, end = '')
 file_output.write("      ")
 file_output.write(line)
 line = file_input.readline()
+#Reads first 3 lines, prints them, and writes them to new file
 
+line_counter = 0 #Sets line_counter to 0
+stanza_counter = 0 #Sets stanza_counter to 0
+total_lines_in_file = 2 #Sets stanza_counter to 2, so it can count the first lines
 
-line_counter = 0
-stanza_counter = 0
-total_lines_in_file = 2
-
-while line != '':                      
-    total_lines_in_file += 1
-    if line == '\n':
-      stanza_counter += 1
-      print ()
-      file_output.write(line)
-    else:
-      line_counter += 1
-      if line_counter < 10:
-        print(line_counter, ")   ", line, end = '')
-        file_output.write(str(line_counter))
+while line != '':    #While the line is not end of file                  
+    total_lines_in_file += 1 #Adds 1 to total_lines_in_file
+    if line == '\n': #If line is blank
+      stanza_counter += 1 #Adds 1 to stanza_counter
+      print () #Prints blank line
+      file_output.write(line) #Writes blank line to file
+    else: #If line is not blank
+      line_counter += 1 #Adds 1 to line_counter
+      if line_counter < 10: #If the line number is less than 10
+        print(line_counter, ")   ", line, end = '') #Prints line_counter with extra space before line
+        file_output.write(str(line_counter)) 
         file_output.write(")   ")
-        file_output.write(line)
+        file_output.write(line) #Writes line_counter with extra space before line
         
         
-      else:
-        print(line_counter, ")  ", line, end = '')
+      else: #If line number is 10 or higher
+        print(line_counter, ")  ", line, end = '') #Prints line_counter with 1 less space before line
         file_output.write(str(line_counter))
         file_output.write(")  ")
         file_output.write(line)
-    line = file_input.readline()
+        #Writes line_counter with 1 less space before line to file
+    line = file_input.readline() #Reads next line
     
   
 
@@ -52,6 +53,7 @@ print ()
 file_output.write('\n')
 print ()
 file_output.write('\n')
+#Prints and writes 2 blanks
 print ("The total number of stanzas in this poem are: ",  stanza_counter, '.')
 file_output.write("The total number of stanzas in this poem are: ")
 file_output.write(str(stanza_counter))
@@ -65,5 +67,8 @@ file_output.write("The song \"Tuesday Afternoon\" first appeared on the album \0
 print ('''The members of The Moody Blues are Justin Hayward, John Lodge, Mike Pinder, Ray Thomas, and Graeme Edge.''')
 file_output.write('''The members of The Moody Blues are Justin Hayward, John Lodge, Mike Pinder, Ray Thomas, and Graeme Edge. ''')
 
+#Prints and writes all these lines
+
 file_input.close()
 file_output.close()
+#Closes both files
